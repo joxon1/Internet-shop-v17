@@ -11,8 +11,7 @@ const DeviceItem = ({device}) => {
         <div>
           <div>Samsung...</div>
           <div>
-            <div>{device.rating}</div>
-            <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Orange_star.svg/1200px-Orange_star.svg.png" />
+            <div>{device.rating}</div> 
           </div>
         </div>
       </Card>
