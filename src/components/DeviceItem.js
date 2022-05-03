@@ -1,20 +1,24 @@
-import React from 'react';
-import { Card, Col, Image } from 'react-bootstrap';
-const DeviceItem = ({device}) => {
+import React from "react";
+import { Card, Col, Image } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+import start from "../accets/star.png";
+import { DEVICE_ROUTE } from "../utilts/consts";
+
+const DeviceItem = ({ device }) => {
+  const history = useHistory();
+  console.log(history);
   return (
-    <Col md={3}>
-      <Card 
-      style={{ width: "150", cursor: 'pointer' }}
-      border="light"
-      >
-        <Image width={150} height={150} src={device.img}/>
-        <div>
-          <div>Samsung...</div>
-          <div>
-            <div>{device.rating}</div> 
-            <Image />
+    <Col md={3} className={"mt-5"} onClick={() => history.push(DEVICE_ROUTE + "/" + device.id)}>
+      <Card style={{ width: 150, cursor: "pointer" }} border={"light"}>
+        <Image width={130} height={150} src={device.img} />
+        <div className="text-black-50 mt-1 d-flex justify-content-between align-items-center">
+          <div>Iphone...</div>
+          <div className="d-flex align-items-center ">
+            <div>{device.rating}</div>
+            <Image src={start} width={20} height={20} />
           </div>
         </div>
+        <div>{device.name}</div>
       </Card>
     </Col>
   );

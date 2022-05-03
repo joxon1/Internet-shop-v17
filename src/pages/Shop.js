@@ -13,7 +13,7 @@ const Shop = () => {
         </Col>
         <Col md={9}>
           <BrandBar/>
-          <DeviceList/>
+          <DeviceList />
         </Col>
       </Row>
     </Container>

@@ -17,7 +17,7 @@ export default class DeviceStore {
       { id: 5, name: "Nokia" },
       
     ];
-    this._device = [
+    this._devices = [
       {
         id: 1,
         name: "Iphone 13 pro Max",
@@ -46,6 +46,20 @@ export default class DeviceStore {
         rating: 5,
         img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
       },
+      {
+        id: 5,
+        name: "Iphone 13 pro Max",
+        price: 25000,
+        rating: 5,
+        img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
+      },
+      {
+        id: 6,
+        name: "Iphone 13 pro Max",
+        price: 25000,
+        rating: 5,
+        img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
+      },
       this._selectedType = {},
       this._selectedBrand = {},
     ];
@@ -59,7 +73,7 @@ export default class DeviceStore {
     this._brends = brends;
   }
   setDevices(devices) {
-    this._device = devices;
+    this._devices = devices;
   }
   setSelectedType(type) {
     this._selectedType = type;
