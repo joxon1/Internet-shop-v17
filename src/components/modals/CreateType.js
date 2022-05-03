@@ -1,28 +1,34 @@
 import React from "react";
-import { Form, FormControl, Modal, Button } from "react-bootstrap";
+import {
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  ModalTitle,
+  Form,
+  FormControl,
+} from "react-bootstrap";
 
-const CreateType = ({show , onHide}) => {
+const CreateType = ({ show, onHide }) => {
   return (
-    <Modal
-    show={show}
-    onHide={onHide}
-      size="lg"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Добавить тип
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
+    <Modal show={show} onHide={onHide} size="lg" centered>
+      <ModalHeader closeButton>
+        <ModalTitle id="contained-modal-title-vcenter">Добавить тип</ModalTitle>
+      </ModalHeader>
+      <ModalBody>
         <Form>
-          <FormControl placeholder="Введите название типа"/>
+          <FormControl placeholder="Введите название типа" />
         </Form>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button variant="outline-danger" onClick={onHide}>Закрыть</Button>
-        <Button variant="outline-success" onClick={onHide}>Добавить</Button>
-      </Modal.Footer>
+      </ModalBody>
+      <ModalFooter>
+        <Button variant="outline-danger" onClick={onHide}>
+          Закрыть
+        </Button>
+        <Button variant="outline-success" onClick={onHide}>
+          Добавить
+        </Button>
+      </ModalFooter>
     </Modal>
   );
 };
