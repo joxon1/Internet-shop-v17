@@ -19,7 +19,7 @@ const DevicePage = () => {
 
   return (
     <Container className={"mt-3"}>
-      <Row>
+      <Row key={device.id}>
         <Col md={4}>
           <Image height={300} src={device.img} />
         </Col>
