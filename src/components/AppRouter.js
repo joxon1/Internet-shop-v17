@@ -7,7 +7,6 @@ import { SHOP_ROUTE } from "../utilts/consts";
 const AppRouter = observer( () => {
   const {user} = useContext(Context)
 
-  console.log(user);
   return (
     <Switch>
       {user.isAuth &&

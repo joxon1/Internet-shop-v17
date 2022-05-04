@@ -5,7 +5,7 @@ import {
   Container,
   Form,
   FormControl,
-  Row,
+  Row
 } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
 import { login, registration } from "../http/userAPI";
@@ -14,14 +14,16 @@ import { lOGIN_ROUTE, REGISTRATION_ROUTE } from "../utilts/consts";
 const Auth = () => {
   const location = useLocation();
   const isLogin = location.pathname === lOGIN_ROUTE;
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const click = async () => {
     if (isLogin) {
-      const response = await login();
+      const response = await login(email, password);
+      console.log(response);
+
     } else {
-      const response = await registration(email,password);
+      const response = await registration(email, password);
       console.log(response);
     }
   };
@@ -37,7 +39,7 @@ const Auth = () => {
           <FormControl
             className="mt-3"
             placeholder="Введите ваш email..."
-            value={email}
+            value={email} 
             onChange={(e) => setEmail(e.target.value)}
           />
           <FormControl

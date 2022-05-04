@@ -10,7 +10,7 @@ import {
   FormControl,
   Dropdown,
   Row,
-  Col,
+  Col
 } from "react-bootstrap";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
@@ -25,7 +25,7 @@ const CreateDevice = ({ show, onHide }) => {
     setInfo([...info, { title: "", description: "", number: Date.now() }]);
   };
   const removeInfo = (number) => {
-    setInfo(info.filter(i=>i.number!==number));
+    setInfo(info.filter((i) => i.number !== number));
   };
   return (
     <Modal show={show} onHide={onHide} size="lg" centered>
@@ -76,7 +76,12 @@ const CreateDevice = ({ show, onHide }) => {
                 <FormControl placeholder="Введите описание свойства " />
               </Col>
               <Col md={4}>
-                <Button onClick={()=>removeInfo(i.number)} variant="outline-danger">Удалить</Button>
+                <Button
+                  onClick={() => removeInfo(i.number)}
+                  variant="outline-danger"
+                >
+                  Удалить
+                </Button>
               </Col>
             </Row>
           ))}
