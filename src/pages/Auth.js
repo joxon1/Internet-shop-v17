@@ -20,7 +20,6 @@ const Auth = () => {
   const click = async () => {
     if (isLogin) {
       const response = await login(email, password);
-      console.log(response);
 
     } else {
       const response = await registration(email, password);
@@ -60,7 +59,7 @@ const Auth = () => {
                 Есть аккаунта ? <NavLink to={lOGIN_ROUTE}>Войдите!</NavLink>
               </div>
             )}
-            <Button variant={"outline-success"} onClick={() => click}>
+            <Button variant={"outline-success"} onClick={() => click()}>
               {isLogin ? "Войти" : "Регистрация"}
             </Button>
           </Row>
