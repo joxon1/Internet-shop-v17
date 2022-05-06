@@ -14,15 +14,16 @@ import { lOGIN_ROUTE, REGISTRATION_ROUTE } from "../utilts/consts";
 const Auth = () => {
   const location = useLocation();
   const isLogin = location.pathname === lOGIN_ROUTE;
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [number, setNumber] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
 
   const click = async () => {
     if (isLogin) {
-      const response = await login(email, password);
-
+      const response = await login(number, name, password);
+      console.log(response);
     } else {
-      const response = await registration(email, password);
+      const response = await registration(number, name, password);
       console.log(response);
     }
   };
@@ -37,9 +38,15 @@ const Auth = () => {
         <Form className="d-flex flex-column">
           <FormControl
             className="mt-3"
-            placeholder="Введите ваш email..."
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Введите ваш номер..."
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
+          />
+          <FormControl
+            className="mt-3"
+            placeholder="Введите ваш имя..."
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <FormControl
             className="mt-3"
