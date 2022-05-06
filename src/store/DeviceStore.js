@@ -2,67 +2,12 @@ import { makeAutoObservable } from "mobx";
 
 export default class DeviceStore {
   constructor() {
-    this._types = [
-      { id: 1, name: "Телефон" },
-      { id: 2, name: "Зарядочный устройтво" },
-      { id: 3, name: "Часы" },
-      { id: 4, name: "Компютеры" },
-      { id: 5, name: "Ноутбек" },
-    ];
-    this._brands = [
-      { id: 1, name: "Apple" },
-      { id: 2, name: "Samsung" },
-      { id: 3, name: "Xiomi" },
-      { id: 4, name: "Vertu" },
-      { id: 5, name: "Nokia" },
-      
-    ];
-    this._devices = [
-      {
-        id: 1,
-        name: "Iphone 13 pro Max",
-        price: 25000,
-        rating: 5,
-        img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
-      },
-      {
-        id: 2,
-        name: "Iphone 13 pro Max",
-        price: 25000,
-        rating: 5,
-        img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
-      },
-      {
-        id: 3,
-        name: "Iphone 13 pro Max",
-        price: 25000,
-        rating: 5,
-        img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
-      },
-      {
-        id: 4,
-        name: "Iphone 13 pro Max",
-        price: 25000,
-        rating: 5,
-        img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
-      },
-      {
-        id: 5,
-        name: "Iphone 13 pro Max",
-        price: 25000,
-        rating: 5,
-        img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
-      },
-      {
-        id: 6,
-        name: "Iphone 13 pro Max",
-        price: 25000,
-        rating: 5,
-        img: "https://texnomart.uz/frontend/web/thumb.php?src=/frontend/web/images/gallery/product/96494/27081/detail.jpg&w=560&h=850&a=t&zc=3",
-      },
-      this._selectedType = {},
-      this._selectedBrand = {},
-    ];
+    this._types = [];
+    this._brands = [];
+    this._devices = [];
+    this._selectedType = {};
+    this._selectedBrand = {};
+    
     makeAutoObservable(this);
   }
 

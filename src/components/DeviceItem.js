@@ -7,9 +7,17 @@ import { DEVICE_ROUTE } from "../utilts/consts";
 const DeviceItem = ({ device }) => {
   const history = useHistory();
   return (
-    <Col md={3} className={"mt-5"} onClick={() => history.push(DEVICE_ROUTE + "/" + device.id)}>
+    <Col
+      md={3}
+      className={"mt-5"}
+      onClick={() => history.push(DEVICE_ROUTE + "/" + device.id)}
+    >
       <Card style={{ width: 150, cursor: "pointer" }} border={"light"}>
-        <Image width={130} height={150} src={device.img} />
+        <Image
+          width={130}
+          height={150}
+          src={device.image}
+        />
         <div className="text-black-50 mt-1 d-flex justify-content-between align-items-center">
           <div>Iphone...</div>
           <div className="d-flex align-items-center ">
