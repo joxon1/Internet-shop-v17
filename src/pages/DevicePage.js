@@ -15,7 +15,7 @@ const DevicePage = () => {
         <Col md={4}>
           <Image
             height={300}
-            src={device.image}
+            src={"https://joxon.s3.amazonaws.com/" + device.image}
           />
         </Col>
         <Col md={4}>
@@ -28,7 +28,7 @@ const DevicePage = () => {
                 width: 240,
                 height: 240,
                 backgroundSize: "cover",
-                fontSize: 64,
+                fontSize: 64
               }}
             >
               {device.rating}
@@ -42,7 +42,7 @@ const DevicePage = () => {
               width: 300,
               height: 300,
               fonstSize: 32,
-              border: "5px solid lightgray",
+              border: "5px solid lightgray"
             }}
           >
             <h3>{device.price}</h3>
@@ -57,7 +57,7 @@ const DevicePage = () => {
             key={info.id}
             style={{
               background: index % 2 === 0 ? "lightgray" : "transparent",
-              padding: 10,
+              padding: 10
             }}
           >
             {info.name}:{info.description}

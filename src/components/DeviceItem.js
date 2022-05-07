@@ -16,7 +16,7 @@ const DeviceItem = ({ device }) => {
         <Image
           width={130}
           height={150}
-          src={device.image}
+          src={"https://joxon.s3.amazonaws.com/" + device.image}
         />
         <div className="text-black-50 mt-1 d-flex justify-content-between align-items-center">
           <div>Iphone...</div>
