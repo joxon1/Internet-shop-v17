@@ -3,7 +3,7 @@ import jwtDecode from "jwt-decode";
 
 export const createType = async (type) => {
   const { data } = await $authHost.post("api/type", type);
-return data
+  return data;
 };
 export const fetchTypes = async () => {
   const { data } = await $host.get("api/type");
@@ -11,7 +11,7 @@ export const fetchTypes = async () => {
 };
 export const createBrand = async (brand) => {
   const { data } = await $authHost.post("api/brand", brand);
-return data
+  return data;
 };
 export const fetchBrands = async () => {
   const { data } = await $host.get("api/brand");
@@ -19,10 +19,17 @@ export const fetchBrands = async () => {
 };
 export const createDevice = async (device) => {
   const { data } = await $authHost.post("api/product", device);
-return data
+  return data;
 };
-export const fetchDevices = async () => {
-  const { data } = await $host.get("api/product/");
+export const fetchDevices = async (typeId, brandId, page, limit = 5) => {
+  const { data } = await $host.get("api/product/", {
+    params: {
+      typeId,
+      brandId,
+      page,
+      limit
+    }
+  });
   return data;
 };
 export const fetchOneDevice = async (id) => {
